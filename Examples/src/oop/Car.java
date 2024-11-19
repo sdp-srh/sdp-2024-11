@@ -21,7 +21,6 @@ public class Car {
 	
 	public void printDetails() {
 		System.out.println("Brand: "+brand+", Doors:"+doors+", Speed: "+speed);
-
 	}
 	
 	public void accelerate(int difference) {

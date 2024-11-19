@@ -3,7 +3,6 @@ package basic;
 public class Test {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		String s =  new String("hello");
 		if (s.equals("hello")) {
 			System.out.println("s is hello");	

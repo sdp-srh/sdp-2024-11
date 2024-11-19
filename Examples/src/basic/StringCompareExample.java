@@ -17,9 +17,9 @@ public class StringCompareExample {
 		
 		String two = "TWO";
 		String three = "THREE";
+		System.out.println(two.compareTo(three));
 		if (two.compareTo(three) > 0) {
 			System.out.println(two +" is bigger than "+ three);
 		}		
 	}
-
 }

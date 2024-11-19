@@ -7,9 +7,9 @@ public class AbsoluteValue {
 	
 	public static void main(String args[]) {
 
-		int number = 100;
+		int number = 500;
 		
-		if (number < 0) {
+		if (isNegativeNumber(number)) {
 			number = number * (-1);
 		}
 		System.out.println("Absolute Value is "+number);
@@ -24,5 +24,9 @@ public class AbsoluteValue {
 
 		System.out.println("This program calculates absolute values");
 		*/
+	}
+	
+	public static boolean isNegativeNumber(int value) {
+		return value < 0;
 	}
 }
