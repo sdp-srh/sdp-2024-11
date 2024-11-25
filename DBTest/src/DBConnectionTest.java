@@ -62,7 +62,7 @@ public class DBConnectionTest extends JFrame implements ActionListener {
 	        conn.setAutoCommit(false);
 	        // create a statement
 	        Statement stmt = conn.createStatement();
-	        ResultSet rs = stmt.executeQuery("SELECT TOP 1 * FROM \"Person\"");
+	        ResultSet rs = stmt.executeQuery("SELECT * FROM \"Person\"");
 	        
 	        while (rs.next()) {
 	        	// add first and last name to the results
