@@ -37,9 +37,11 @@ public class ReadPersonsServlet extends HttpServlet {
 		String result = "<html>";
 		result += "<body>";
 		result += "<h1>Persons</h1>";
+		int count =0;
 		for (Person person : persons) {
+			count++;
 			// create a p tag for each person
-			result += "<p>"+person.getFirstName()+" "+person.getLastName()+"</p>";
+			result += "<p>"+count+". "+person.getFirstName()+" "+person.getLastName()+"</p>";
 		}
 		result += "</body>";
 		result += "</html>";

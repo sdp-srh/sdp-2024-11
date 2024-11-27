@@ -29,7 +29,7 @@ public class MultiplyServlet extends HttpServlet {
 		System.out.println(a+ ","+b);
 		int result = Integer.parseInt(a) + Integer.parseInt(b);
 		// String text = "Result is : ?";
-		System.out.println("The result is "+result);
+		System.out.println("The result is for add "+result);
 		response.getWriter().append(""+result);
 	}
 

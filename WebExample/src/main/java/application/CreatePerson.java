@@ -27,6 +27,7 @@ public class CreatePerson extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		System.out.println("Test");
 		String firstName = request.getParameter("fname");
 		String lastName = request.getParameter("lname");
 		Person person = new Person(firstName, lastName);

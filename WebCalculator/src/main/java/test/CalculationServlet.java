@@ -29,6 +29,7 @@ public class CalculationServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// here we read the parameters from the request
 		// http://localhost:8080/WebCalculator/calculate?a=5&b=2&op=add
+		
 		int a = Integer.parseInt(request.getParameter("a"));
 		int b = Integer.parseInt(request.getParameter("b"));
 		String operation = request.getParameter("op");
