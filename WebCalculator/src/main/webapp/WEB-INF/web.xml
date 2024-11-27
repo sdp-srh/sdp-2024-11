@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://jakarta.ee/xml/ns/jakartaee" xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd" id="WebApp_ID" version="6.0">
+  <display-name>LiveWebExample</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+  </welcome-file-list>
+  <servlet>
+    <description></description>
+    <display-name>HtmlTestServlet</display-name>
+    <servlet-name>HtmlTestServlet</servlet-name>
+    <servlet-class>test.HtmlTestServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>HtmlTestServlet</servlet-name>
+    <url-pattern>/HtmlTestServlet</url-pattern>
+    <url-pattern>/hts</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>MultiplyServlet</display-name>
+    <servlet-name>MultiplyServlet</servlet-name>
+    <servlet-class>test.MultiplyServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MultiplyServlet</servlet-name>
+    <url-pattern>/MultiplyServlet</url-pattern>
+    <url-pattern>/multiply</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>CalculationServlet</display-name>
+    <servlet-name>CalculationServlet</servlet-name>
+    <servlet-class>test.CalculationServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CalculationServlet</servlet-name>
+    <url-pattern>/CalculationServlet</url-pattern>
+    <url-pattern>/calculate</url-pattern>
+  </servlet-mapping>
+</web-app>
