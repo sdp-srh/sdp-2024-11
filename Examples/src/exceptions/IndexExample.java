@@ -9,7 +9,7 @@ public class IndexExample {
 			String s = "Test";
 			int l = s.length();
 			System.out.println(l);
-			test = array[5];	
+			test = array[1];	
 		} catch (ArrayIndexOutOfBoundsException e) {
 			e.printStackTrace();
 			System.out.println("The size of the array is: "+array.length);

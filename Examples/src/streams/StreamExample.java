@@ -16,7 +16,7 @@ public class StreamExample {
 		System.out.println("Random Data");
 		System.out.println(numbers);
 		System.out.println();
-
+		/*
 		// filter out only the even numbers in our list
 		List<Integer> evenNumbers = numbers.stream().filter(num -> num % 2 == 0).collect(Collectors.toList());
 		System.out.println("Filtered even numbers");
@@ -35,7 +35,7 @@ public class StreamExample {
 		System.out.println("squaredNumbers");
 		System.out.println(squaredNumbers);
 		System.out.println();
-
+		*/
 			
 		// calculate to sum of all numbers
 		int sum = numbers.stream().reduce(0, (result, num) -> result + num);
@@ -48,7 +48,8 @@ public class StreamExample {
 		
 		// calculate the minimum number of the list
 		int min = numbers.stream().reduce(highestValue, (result, num) -> result > num ? num : result);
-		System.out.println("Min value is "+min);			
+		System.out.println("Min value is "+min);	
+			
 	}
 	
 	public static ArrayList<Integer> getRandomNumbers(int amount, int max) {
