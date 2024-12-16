@@ -18,6 +18,5 @@ print(persons)
 for person in persons:
     if person == 'Dagobert':
         print('Dagobert is part of the list')
-        print('Dagobert is part of the list')
     else:
         print('someone else')

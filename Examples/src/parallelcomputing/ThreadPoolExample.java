@@ -6,6 +6,13 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
 
 public class ThreadPoolExample {
+	
+	public static String nameForNumber(int num) {
+		if (num == 1) return "A";
+		if (num == 2) return "B";
+		if (num == 3) return "C";
+		return "?";
+	}
 	public static void main(String[] args) {
 
 		// ExecutorService executor = Executors.newSingleThreadExecutor();
@@ -13,7 +20,7 @@ public class ThreadPoolExample {
 
 		CallCounts callCounts = new CallCounts();
 		for (int i = 1; i <= 3; i++) {
-			CounterThread ct = new CounterThread("" + i + " Name", 0, callCounts);
+			CounterThread ct = new CounterThread("" + nameForNumber(i) + " Name", 0, callCounts);
 			executor.execute(ct);
 		}
 

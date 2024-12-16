@@ -42,7 +42,6 @@ function App() {
 
         {/* Button to trigger calculation */}
         <button onClick={calculateSum}>Calculate Sum</button>
-
         {/* Display result */}
         <h1>Result: {data.result}</h1>
       </header>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introducing the X-Speed Z1</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: #f1f1f1;
+        }
+        header {
+            background: url('car-hero.jpg') no-repeat center center/cover;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+        }
+        header h1 {
+            font-size: 4rem;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
+        }
+        header p {
+            font-size: 1.5rem;
+        }
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            padding: 1rem;
+            display: flex;
+            justify-content: space-around;
+            z-index: 1000;
+        }
+        nav a {
+            color: #f1f1f1;
+            text-decoration: none;
+            font-size: 1.2rem;
+        }
+        section {
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin: auto;
+        }
+        .features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+        .feature {
+            flex: 1;
+            min-width: 250px;
+            background: #1e1e1e;
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1rem;
+        }
+        .gallery img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .cta {
+            text-align: center;
+            padding: 2rem;
+            background: #1e1e1e;
+            border-radius: 10px;
+        }
+        .cta a {
+            display: inline-block;
+            margin-top: 1rem;
+            padding: 1rem 2rem;
+            background: #0078FF;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="#about">About</a>
+        <a href="#features">Features</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <header>
+        <div>
+            <h1>The X-Speed Z1</h1>
+            <p>Unleash the future of driving</p>
+        </div>
+    </header>
+
+    <section id="about">
+        <h2>About the X-Speed Z1</h2>
+        <p>The X-Speed Z1 redefines performance, luxury, and innovation. Engineered to perfection, it combines cutting-edge technology with unparalleled design to create an experience like no other.</p>
+    </section>
+
+    <section id="features">
+        <h2>Key Features</h2>
+        <div class="features">
+            <div class="feature">
+                <h3>Performance</h3>
+                <p>600HP turbocharged engine, 0-60 in 3.2 seconds.</p>
+            </div>
+            <div class="feature">
+                <h3>Design</h3>
+                <p>Aerodynamic lines and premium materials for a stunning look.</p>
+            </div>
+            <div class="feature">
+                <h3>Technology</h3>
+                <p>AI-driven systems and a futuristic infotainment experience.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery">
+        <h2>Gallery</h2>
+        <div class="gallery">
+            <img src="car-image1.jpg" alt="X-Speed Z1 front view">
+            <img src="car-image2.jpg" alt="X-Speed Z1 side view">
+            <img src="car-image3.jpg" alt="X-Speed Z1 interior">
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="cta">
+            <h2>Book a Test Drive</h2>
+            <p>Experience the thrill of the X-Speed Z1 for yourself.</p>
+            <a href="#">Contact Us</a>
+        </div>
+    </section>
+</body>
+</html>

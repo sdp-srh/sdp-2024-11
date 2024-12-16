@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tic Tac Toe</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f0f0f0;
+    }
+    .board {
+      display: grid;
+      grid-template-columns: repeat(3, 100px);
+      grid-template-rows: repeat(3, 100px);
+      gap: 5px;
+    }
+    .cell {
+      width: 100px;
+      height: 100px;
+      background-color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 2rem;
+      font-weight: bold;
+      cursor: pointer;
+      border: 2px solid #ccc;
+    }
+    .cell.taken {
+      cursor: not-allowed;
+      color: #555;
+    }
+    .message {
+      margin-top: 20px;
+      font-size: 1.2rem;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <div class="board" id="board"></div>
+    <div class="message" id="message">Player X's turn</div>
+  </div>
+  <script>
+    // Game state variables
+    const board = document.getElementById('board');
+    const message = document.getElementById('message');
+    let currentPlayer = 'X';
+    let gameState = Array(9).fill(null);
+
+    // Winning combinations
+    const winningCombinations = [
+      [0, 1, 2], [3, 4, 5], [6, 7, 8],
+      [0, 3, 6], [1, 4, 7], [2, 5, 8],
+      [0, 4, 8], [2, 4, 6]
+    ];
+
+    // Initialize board
+    function createBoard() {
+      board.innerHTML = '';
+      gameState.forEach((cell, index) => {
+        const cellElement = document.createElement('div');
+        cellElement.classList.add('cell');
+        cellElement.dataset.index = index;
+        cellElement.addEventListener('click', handleCellClick);
+        board.appendChild(cellElement);
+      });
+    }
+
+    // Handle cell click
+    function handleCellClick(event) {
+      const index = event.target.dataset.index;
+      if (gameState[index] || checkWinner()) return;
+
+      gameState[index] = currentPlayer;
+      event.target.textContent = currentPlayer;
+      event.target.classList.add('taken');
+
+      if (checkWinner()) {
+        message.textContent = `Player ${currentPlayer} wins!`;
+        return;
+      }
+
+      if (gameState.every(cell => cell)) {
+        message.textContent = 'It\'s a tie!';
+        return;
+      }
+
+      currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
+      message.textContent = `Player ${currentPlayer}'s turn`;
+    }
+
+    // Check for a winner
+    function checkWinner() {
+      return winningCombinations.some(combination => {
+        const [a, b, c] = combination;
+        return gameState[a] && gameState[a] === gameState[b] && gameState[a] === gameState[c];
+      });
+    }
+
+    // Start the game
+    createBoard();
+  </script>
+</body>
+</html>

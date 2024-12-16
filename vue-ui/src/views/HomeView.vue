@@ -1,6 +1,6 @@
 <template>
   <main>
-    <h1>Vue Calculator</h1>
+    <h1>Vue Calculator {{ result }}</h1>
     <div class="calculator">
       <input type="number" v-model.number="a" placeholder="Enter first number">
 
@@ -26,7 +26,7 @@
   const a = ref(0);
   const b = ref(0);
   const operation = ref('add');
-  const result = ref(0);
+  const result = ref(-1);
 
   // here we request the backend data
   const calculate = async () => {

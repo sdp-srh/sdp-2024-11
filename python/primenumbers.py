@@ -1,16 +1,22 @@
 
 
-def print_a_number(x):
-    print(x)
+def is_prime_number(x):
+    if x > 1:
+        for i in range(2, x):
+            if (x % i) == 0:
+                return False
+        return True
+    else:
+        return False
 
-lower = 900
-upper = 1000
-print("Prime numbers between", lower, "and", upper, "are:")
-for num in range(lower, upper + 1):
-    # all prime numbers are greater than 1
-    if num > 1:
-        for i in range(2, num):
-            if (num % i) == 0:
-                break
-            else:
-                print_a_number(num)
+if __name__ == '__main__':
+    lower = 900
+    upper = 1000
+
+    print("Prime numbers between", lower, "and", upper, "are:")
+
+    for num in range(lower, upper + 1):
+        # all prime numbers are greater than 1
+        if num > 1:
+            if (is_prime_number(num)):
+                print(num)
